@@ -9,27 +9,17 @@
   }
 }
 
-.btn-custom {
-  color: #001b4a !important;
-
-  @media (max-width: 600px) {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-}
-
 .btn-product {
   margin-top: 0;
   border: 1px solid #000;
   width: 310px;
   text-align: center;
   border-radius: 13px;
-  background-color: #fff;
-  color: #001b4a;
+  background-color: $primary-bg-color;
+  color: $primary-color;
   display: flex;
   justify-content: center;
-  background-color: #ffd867;
+  background-color: $btn-background-color;
   cursor: pointer;
 
   @media (max-width: 600px) {
