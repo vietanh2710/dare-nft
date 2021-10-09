@@ -1,0 +1,66 @@
+@use "../base/variables" as *;
+
+.road-map {
+  padding-left: 100px;
+
+  @media (max-width: 1024px) {
+    padding-left: 50px;
+  }
+
+  @media (max-width: 600px) {
+    padding-left: 0 !important;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .btn-road-map {
+    background-color: $primary-bg-color;
+    border: 2px solid $primary-color;
+    border-radius: 16px;
+    width: 150px;
+    color: $primary-color;
+    padding-bottom: 3px;
+    font-family: novecenUltraBold;
+    position: relative;
+    z-index: 5;
+    cursor: pointer;
+
+    @media (max-width: 600px) {
+      border-radius: 12px;
+      width: 170px;
+      padding: 0 10px 6px 10px;
+    }
+
+    div {
+      font-size: 30px;
+      text-align: center;
+    }
+  }
+
+  .img-web {
+    display: block;
+    margin-top: -150px;
+    position: relative;
+    z-index: 4;
+
+    @media (max-width: 600px) {
+      display: none;
+    }
+  }
+
+  .img-mobile {
+    display: none;
+
+    @media (max-width: 600px) {
+      display: block;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .road-map {
+    padding-left: 50px;
+  }
+}

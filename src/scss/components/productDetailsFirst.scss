@@ -1,0 +1,74 @@
+@use "../base/variables" as *;
+
+.product-details {
+  &-content {
+    color: $primary-color;
+    margin-bottom: 10px;
+
+    .desc {
+      margin-top: 5px;
+      width: 46%;
+    }
+  }
+
+  &__wrapper {
+    height: 100%;
+    padding: 50px 100px;
+
+    @media (max-width: 1024px) {
+      padding: 50px;
+    }
+  }
+
+  .img-mobile {
+    display: none;
+  }
+
+  .img-web {
+    display: block;
+  }
+
+  &-content {
+    .desc {
+      padding-bottom: 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .product-details {
+    &__wrapper {
+      padding: 50px;
+
+      .btn {
+        width: 300px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .product-details {
+    &__wrapper {
+      padding: 20px;
+
+      .title {
+        font-family: $ff-regular;
+        font-size: 25px;
+      }
+
+      .desc {
+        padding-top: 10px;
+        width: 100%;
+      }
+    }
+
+    .img-mobile {
+      display: block;
+    }
+
+    .img-web {
+      display: none;
+    }
+  }
+}

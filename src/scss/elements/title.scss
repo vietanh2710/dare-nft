@@ -1,0 +1,12 @@
+@use "../base/variables" as *;
+
+.title {
+  font-size: 21px;
+  margin: 0 0 5px 0;
+  font-family: $ff-medium;
+
+  @media (max-width: 600px) {
+    letter-spacing: 0;
+    font-size: 32px;
+  }
+}

@@ -1,0 +1,212 @@
+@use "../base/variables" as *;
+
+.header {
+  width: 100%;
+  height: auto;
+  background-color: $primary-color;
+
+  .line {
+    display: block;
+    width: 91%;
+    color: $primary-text-color;
+    background-color: $primary-text-color;
+    height: 1px;
+    margin: 0 79px;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+
+    @media (max-width: 1024px) {
+      margin: 0 50px;
+      width: 90%;
+    }
+  }
+
+  .navbar {
+    display: flex;
+    padding: 20px 80px;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 1024px) {
+      padding: 20px 50px;
+    }
+  }
+
+  .hamburger {
+    display: none;
+    border: 1px solid $primary-bg-color;
+    border-radius: 10px;
+    padding: 5px 10px;
+
+    @media (max-width: 1024px) {
+      right: 75px;
+    }
+
+    @media (max-width: 768px) {
+      right: 50px;
+    }
+
+    @media (max-width: 600px) {
+      right: 20px;
+      margin-top: 20px;
+    }
+  }
+
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    color: $primary-text-color;
+    background-color: $primary-bg-color;
+  }
+
+  .nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 0;
+    margin-left: auto;
+  }
+
+  .nav-item {
+    margin-left: 50px;
+    cursor: pointer;
+  }
+
+  .nav-link {
+    font-size: 20px;
+    color: $primary-text-color;
+    font-family: $ff-ligth;
+
+    .custom-btn-navbar {
+      margin-top: 0;
+      border: 1px solid #000;
+      width: 180px;
+      text-align: center;
+      border-radius: 8px;
+      background-color: $primary-bg-color;
+      color: #001b4a;
+      display: flex;
+      justify-content: center;
+
+      div {
+        border: 1px solid #000;
+        font-family: $ff-ultraBold;
+        border-radius: 8px;
+        padding: 4px 0 6px 0;
+        width: 170px;
+        line-height: 22px;
+      }
+    }
+
+    span {
+      font-family: $ff-ultraBold;
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .header {
+    .nav-item {
+      margin-left: 25px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    .navbar {
+      padding: 20px 50px;
+    }
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    z-index: 1000;
+    top: 0;
+    flex-direction: column;
+    background-color: $primary-bg-color;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-item {
+    margin: 20px 0 !important;
+  }
+
+  .nav-link {
+    color: #001b4a !important;
+  }
+
+  .hamburger {
+    position: fixed;
+    display: block !important;
+    cursor: pointer;
+    z-index: 1001;
+
+    &.active {
+      .bar {
+        color: $secondary-text-color;
+        background-color: $secondary-bg-color;
+      }
+    }
+  }
+
+  .backdrop {
+    &.active {
+      background-color: $secondary-bg-color;
+      opacity: 0.5;
+      z-index: 999;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    height: 100px;
+
+    .navbar {
+      padding: 20px 20px 20px 0;
+      justify-content: flex-end;
+    }
+
+    .nav-item {
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+
+  .nav-logo {
+    display: none;
+  }
+}

@@ -1,0 +1,13 @@
+@use "../base/variables" as *;
+
+.desc {
+  font-size: 19px;
+  font-family: $ff-ligth;
+  line-height: 26px;
+
+  @media (max-width: 600px) {
+    font-size: 10px;
+    letter-spacing: 0;
+    line-height: unset;
+  }
+}

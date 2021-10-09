@@ -1,0 +1,26 @@
+{
+  "name": "dare-nft",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp --development",
+    "build": "gulp build --productiton",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "4.0.0",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-font": "^1.0.4",
+    "gulp-imagemin": "^7.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-terser": "^2.1.0",
+    "gulp-webp": "^4.0.1"
+  },
+  "dependencies": {
+    "sass": "^1.42.1"
+  }
+}

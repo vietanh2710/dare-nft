@@ -1,0 +1,120 @@
+@use "../base/variables" as *;
+
+.diagram {
+  background-color: $primary-color;
+
+  .img-web {
+    padding: 0 50px;
+
+    @media (max-width: 600px) {
+      padding: 0;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    margin-top: 0;
+  }
+
+  &__wrapper {
+    height: 100%;
+    padding: 50px 100px;
+
+    @media (max-width: 1024px) {
+      padding: 50px;
+    }
+  }
+
+  &-content__container {
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 75px;
+  }
+
+  &-content {
+    font-size: 18px;
+    width: 100%;
+    color: $primary-text-color;
+
+    .desc {
+      font-size: 15px;
+      line-height: 20px;
+      width: 75%;
+
+      @media (max-width: 1024px) {
+        width: 80%;
+      }
+
+      @media (max-width: 600px) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .diagram {
+    margin-top: 0;
+
+    &__wrapper {
+      padding: 50px 40px 50px 50px;
+    }
+
+    .img-web {
+      display: block;
+      padding: 0 20px;
+    }
+
+    &-content__container {
+      padding-top: 50px;
+      grid-gap: 25px;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .diagram {
+    margin-top: 100px;
+    background-color: $primary-color;
+    background-image: url("../images/mobile/Group\ 7.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &__wrapper {
+      height: 100%;
+      padding: 0 90px 0 95px;
+    }
+
+    .img-web {
+      display: none;
+    }
+
+    &-content__container {
+      padding-top: 200px;
+      padding-bottom: 30px;
+      padding-left: 0;
+      display: flex;
+      flex-direction: column;
+      grid-gap: 30px;
+    }
+
+    &-content {
+      text-align: center;
+      font-size: 18px;
+      width: 100%;
+      color: $primary-text-color;
+
+      .title {
+        font-family: $ff-regular;
+        font-size: 25px;
+      }
+
+      .desc {
+        width: 65%;
+        transform: translateX(25%);
+        font-size: 10px;
+      }
+    }
+  }
+}
