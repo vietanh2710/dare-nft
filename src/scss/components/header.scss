@@ -5,32 +5,16 @@
   height: auto;
   background-color: $primary-color;
 
-  .line {
-    display: block;
-    width: 92%;
-    color: $primary-text-color;
-    background-color: $primary-text-color;
-    height: 1px;
-    margin: 0 79px;
-
-    @media (max-width: 768px) {
-      display: none;
-    }
-
-    @media (max-width: 1024px) {
-      margin: 0 50px;
-      width: 90%;
-    }
-  }
-
   .navbar {
     display: flex;
-    padding: 20px 80px;
+    padding: 20px 0;
+    margin: 0 60px;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 2px solid $primary-bg-color;
 
-    @media (max-width: 1024px) {
-      padding: 20px 50px;
+    @media (max-width: 768px) {
+      border-bottom: unset;
     }
   }
 
@@ -118,12 +102,6 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .header {
-    .navbar {
-      padding: 20px 50px;
-    }
-  }
-
   .nav-menu {
     position: fixed;
     left: -100%;
