@@ -1,3 +1,5 @@
 # dare-nft
 
-npm run dev
+npm install 
+
+gulp
