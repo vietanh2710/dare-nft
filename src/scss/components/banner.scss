@@ -13,7 +13,7 @@
     padding-top: 200px;
     padding-bottom: 200px;
     display: grid;
-    grid-template-columns: 42% 55%;
+    grid-template-columns: 42% 58%;
 
     .btn-wrapper {
       display: none;
@@ -43,8 +43,8 @@
         height: 2px;
         margin-top: 20px;
         position: relative;
-        left: 91% !important;
-        width: 8% !important;
+        left: 90% !important;
+        width: 4% !important;
 
         @media (max-width: 600px) {
           display: none;
