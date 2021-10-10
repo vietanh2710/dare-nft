@@ -11,7 +11,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "4.0.0",
+    "browser-sync": "^2.27.5",
+    "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-font": "^1.0.4",
