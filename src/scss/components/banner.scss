@@ -13,7 +13,7 @@
     padding-top: 200px;
     padding-bottom: 200px;
     display: grid;
-    grid-template-columns: 45% 55%;
+    grid-template-columns: 42% 55%;
 
     .btn-wrapper {
       display: none;
@@ -26,7 +26,6 @@
       flex-direction: column;
       justify-content: center;
       height: 100%;
-      margin-left: 100px;
 
       @media (max-width: 1024px) {
         margin-left: 50px;
@@ -44,8 +43,8 @@
         height: 2px;
         margin-top: 20px;
         position: relative;
-        left: 90% !important;
-        width: 5% !important;
+        left: 91% !important;
+        width: 8% !important;
 
         @media (max-width: 600px) {
           display: none;
@@ -98,7 +97,7 @@
 
     .line {
       display: block;
-      width: 130%;
+      width: 116%;
       color: $primary-text-color;
       background-color: $primary-bg-color;
       height: 2px;
